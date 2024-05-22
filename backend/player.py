@@ -12,6 +12,7 @@ class Player:
         self.username = kwargs.get('username', '')
         self.password = kwargs.get('password', '')
         self.valid_to_participate = kwargs.get('valid_to_participate', False)
+        self.is_winner = False
 
     def to_dict(self):
         return {
