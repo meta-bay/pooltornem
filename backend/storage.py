@@ -4,6 +4,7 @@ Storage Module
 """
 from pymongo import MongoClient
 from backend.player import Player
+from backend.makematch import Makematch
 
 
 class Storage:
@@ -18,6 +19,10 @@ class Storage:
         """Initialize"""
         self.client = MongoClient(self.mongo_uri)
         self.database = self.client[self.database_name]
+        self.collection = self.database[collection_name]
+
+    def set_collection(self, collection_name):
+        """Set the collection to be used"""
         self.collection = self.database[collection_name]
 
     def save(self, player):
