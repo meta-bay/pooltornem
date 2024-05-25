@@ -13,18 +13,34 @@ class Storage:
 
     mongo_uri = 'mongodb://localhost:27017/'
     database_name = 'pooltornem-test'
-    collection_name = 'players'
 
-    def __init__(self):
+    def __init__(self, collection_name='players'):
         """Initialize"""
         self.client = MongoClient(self.mongo_uri)
         self.database = self.client[self.database_name]
-        self.collection = self.database[self.collection_name]
+        self.collection = self.database[collection_name]
 
     def save(self, player):
         """Save instance"""
+        self.set_collection('players')
         player_dict = player.to_dict()
         self.collection.insert_one(player_dict)
+
+    def save_match(self, match):
+        """Save match instance"""
+        self.set_collection('matches')
+        match_dict = match.to_dict()
+        self.collection.insert_one(match_dict)
+
+    def get_match(self):
+        """Get Ongoing match"""
+        self.set_collection('matches')
+        match_dict = self.collection.find()
+        return self._create_match_instance(match_dict)
+
+    def _create_match_instance(self, match_dict):
+        """Create match instance from the fetched dict"""
+        return Makematch(**match_dict)
 
     def get_player_by_email(self, email):
         """Fetch player instance by email"""

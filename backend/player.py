@@ -6,6 +6,7 @@ import re
 
 
 class Player:
+    """Play class describing all user detail"""
     def __init__(self, **kwargs):
         self.name = kwargs.get('name', '')
         self.email = kwargs.get('email', '')
