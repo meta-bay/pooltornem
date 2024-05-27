@@ -42,6 +42,7 @@ class Makematch:
                 winners.append(player)
         self.players = winners
 
+        self.rounds += 1
         self.init_matches()
 
     def get_matches(self):
