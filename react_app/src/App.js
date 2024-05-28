@@ -5,7 +5,7 @@ import Landingpage from './Landingpage';
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <Landingpage />
     </div>
   );
 }

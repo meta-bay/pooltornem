@@ -1,5 +1,3 @@
-import './score.css'
-
 const Score = () => {
     return ( 
         <div className="container align-items-center mt-5 dash-bg">
