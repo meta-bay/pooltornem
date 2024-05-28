@@ -1,6 +1,8 @@
+import './score.css'
+
 const Score = () => {
     return ( 
-        <div className="container align-items-center mt-5">
+        <div className="container align-items-center mt-5 dash-bg">
             <div className="info row bg-light p-4 m-5 border rounded justify-content-center">
                 <div className="score col-5 border border-dark rounded text-align-center">
                     <span>Score</span>
