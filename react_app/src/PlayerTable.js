@@ -1,3 +1,4 @@
+import Dashheader from "./Dashheader";
 import PlayerRow from "./PlayerRow";
 
 const PlayerTable = () => {
@@ -18,6 +19,8 @@ const PlayerTable = () => {
     },
   ];
   return (
+    <div>
+    <div><Dashheader /></div>
     <div className="players-list">
       <div className="member-table-container">
         <div className="member-table-header">
@@ -50,6 +53,7 @@ const PlayerTable = () => {
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   );
 };

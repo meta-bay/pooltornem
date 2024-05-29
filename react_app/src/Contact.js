@@ -1,5 +1,9 @@
+import Dashheader from "./Dashheader";
+
 const Contact = () => {
   return (
+    <div>
+    <div><Dashheader /></div>
     <div className="contact-page">
       <main>
         <h1>Contact Pooltornem</h1>
@@ -32,6 +36,7 @@ const Contact = () => {
           </div>
         </div>
       </main>
+    </div>
     </div>
   );
 };

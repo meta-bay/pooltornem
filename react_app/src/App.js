@@ -13,6 +13,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Tournament from "./Tournament";
+import Dashheader from "./Dashheader";
 
 function App() {
   return (
@@ -21,11 +22,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/match" element={<Tournament />} />
-          <Route path="/players" element={<PlayerTable />} />
+          <Route path="/match" element={<Outlet />}>
+            <Route index element={<Tournament />} />
+          </Route>
+          <Route path="/players" element={<Outlet />}>
+            <Route index element={<PlayerTable />} />
+          </Route>
           <Route path="/contact-us" element={<Contact />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Outlet />}>
+            <Route index element={<Register />} />
+          </Route>
+          <Route path="/login" element={<Outlet />}>
+            <Route index element={<Login />} />
+          </Route>
         </Routes>
       </Router>
     </div>

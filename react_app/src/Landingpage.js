@@ -7,20 +7,31 @@ const Landingpage = () => {
         <ul className="d-flex justify-content-center container">
           <li className="btn text-light">Home</li>
           <li>
-            <Link to="/match" className="btn text-light">Match</Link>
+            <Link to="/match" className="btn text-light">
+              Match
+            </Link>
           </li>
           <li className="text-light">
             <Link to="/players" className="btn text-light">
               Players
             </Link>
           </li>
-          <li className="btn text-light">Contact</li>
+          <li>
+            <Link to="/contact-us" className="btn text-light">
+              Contact
+            </Link>
+          </li>
         </ul>
         <div className="auth column">
-          <button className="reg-btn btn text-dark border me-3 bg-light">
+          <Link
+            to="/register"
+            className="text-decoration-none btn bg-light me-3"
+          >
             Register
-          </button>
-          <button className="login-btn btn text-light border">Login</button>
+          </Link>
+          <Link to="/login" className="text-decoration-none btn text-light">
+            Login
+          </Link>
         </div>
       </nav>
       <div className="landing-content">

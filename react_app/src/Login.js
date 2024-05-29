@@ -1,3 +1,5 @@
+import Dashheader from "./Dashheader";
+
 const Login = () => {
   const LoginForm = () => {
     return (
@@ -22,17 +24,22 @@ const Login = () => {
     );
   };
   return (
-    <div className="login">
-      <div className="login-container">
-        <div className="left-login">
-          <div className="logo">
-            <h1>COMPANY</h1>
-            <h2>LOGO</h2>
-            <h3>NAME</h3>
+    <div>
+      <div>
+        <Dashheader />
+      </div>
+      <div className="login">
+        <div className="login-container">
+          <div className="left-login">
+            <div className="logo">
+              <h1>COMPANY</h1>
+              <h2>LOGO</h2>
+              <h3>NAME</h3>
+            </div>
           </div>
-        </div>
-        <div className="right-login">
-          <LoginForm />
+          <div className="right-login">
+            <LoginForm />
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import Dashheader from "./Dashheader";
+
 const Register = () => {
   const RegisterForm = () => {
     return (
@@ -39,17 +41,22 @@ const Register = () => {
   };
 
   return (
-    <div className="register">
-      <div className="reg-container">
-        <div className="reg-left">
-          <div className="logo">
-            <h1>COMPANY</h1>
-            <h2>LOGO</h2>
-            <h3>NAME</h3>
+    <div>
+      <div>
+        <Dashheader />
+      </div>
+      <div className="register">
+        <div className="reg-container">
+          <div className="reg-left">
+            <div className="logo">
+              <h1>COMPANY</h1>
+              <h2>LOGO</h2>
+              <h3>NAME</h3>
+            </div>
           </div>
-        </div>
-        <div className="reg-right container">
-          <RegisterForm />
+          <div className="reg-right container">
+            <RegisterForm />
+          </div>
         </div>
       </div>
     </div>

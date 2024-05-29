@@ -1,18 +1,24 @@
-import React from 'react';
+import React from "react";
 import {
   SingleEliminationBracket,
   DoubleEliminationBracket,
   Match,
   SVGViewer,
-  createTheme
+  createTheme,
 } from "@g-loot/react-tournament-brackets";
+import Dashheader from "./Dashheader";
 
 export default function Tournament() {
-  return <SingleElimination />;
+  return (
+    <div>
+      <Dashheader />
+      <SingleElimination />
+    </div>
+  );
 }
 
 export const SingleElimination = () => (
-  <div style={{ height: '100vh', width: '100vw' }}>
+  <div style={{ height: "100vh", width: "100vw" }}>
     <SingleEliminationBracket
       theme={GlootTheme}
       matches={simpleSmallBracket}
@@ -40,18 +46,18 @@ const GlootTheme = createTheme({
   score: {
     background: {
       wonColor: `#10131C`,
-      lostColor: "#10131C"
+      lostColor: "#10131C",
     },
-    text: { highlightedWonColor: "#7BF59D", highlightedLostColor: "#FB7E94" }
+    text: { highlightedWonColor: "#7BF59D", highlightedLostColor: "#FB7E94" },
   },
   border: {
     color: "#292B43",
-    highlightedColor: "RGBA(152,82,242,0.4)"
+    highlightedColor: "RGBA(152,82,242,0.4)",
   },
   roundHeader: { backgroundColor: "#3B3F73", fontColor: "#F4F2FE" },
   connectorColor: "#3B3F73",
   connectorColorHighlight: "RGBA(152,82,242,0.4)",
-  svgBackground: "#0F121C"
+  svgBackground: "#0F121C",
 });
 
 export const simpleSmallBracket = [
@@ -64,8 +70,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "1", name: "Abel" },
-      { id: "2", name: "Abebe" }
-    ]
+      { id: "2", name: "Abebe" },
+    ],
   },
   {
     id: 2,
@@ -75,8 +81,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "3", name: "Nahom" },
-      { id: "4", name: "Eyuel" }
-    ]
+      { id: "4", name: "Eyuel" },
+    ],
   },
   {
     id: 3,
@@ -86,8 +92,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "5", name: "Siem" },
-      { id: "6", name: "Ahmed" }
-    ]
+      { id: "6", name: "Ahmed" },
+    ],
   },
   {
     id: 4,
@@ -97,8 +103,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "7", name: "Bayie" },
-      { id: "8", name: "Basleal" }
-    ]
+      { id: "8", name: "Basleal" },
+    ],
   },
   {
     id: 5,
@@ -108,8 +114,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "9", name: "Nebiyou" },
-      { id: "10", name: "Biruk" }
-    ]
+      { id: "10", name: "Biruk" },
+    ],
   },
   {
     id: 6,
@@ -119,8 +125,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "11", name: "Barrok" },
-      { id: "12", name: "Kaleb" }
-    ]
+      { id: "12", name: "Kaleb" },
+    ],
   },
   {
     id: 7,
@@ -130,8 +136,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "13", name: "Behailu" },
-      { id: "14", name: "Beamlak" }
-    ]
+      { id: "14", name: "Beamlak" },
+    ],
   },
   {
     id: 8,
@@ -141,8 +147,8 @@ export const simpleSmallBracket = [
     state: "SCHEDULED",
     participants: [
       { id: "15", name: "Samuel" },
-      { id: "16", name: "Yoseph" }
-    ]
+      { id: "16", name: "Yoseph" },
+    ],
   },
 
   // Round 2
@@ -152,7 +158,7 @@ export const simpleSmallBracket = [
     tournamentRoundText: "2",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
+    participants: [],
   },
   {
     id: 10,
@@ -160,7 +166,7 @@ export const simpleSmallBracket = [
     tournamentRoundText: "2",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
+    participants: [],
   },
   {
     id: 11,
@@ -168,7 +174,7 @@ export const simpleSmallBracket = [
     tournamentRoundText: "2",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
+    participants: [],
   },
   {
     id: 12,
@@ -176,7 +182,7 @@ export const simpleSmallBracket = [
     tournamentRoundText: "2",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
+    participants: [],
   },
 
   // Round 3
@@ -186,7 +192,7 @@ export const simpleSmallBracket = [
     tournamentRoundText: "3",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
+    participants: [],
   },
   {
     id: 14,
@@ -194,7 +200,7 @@ export const simpleSmallBracket = [
     tournamentRoundText: "3",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
+    participants: [],
   },
 
   // Final
@@ -204,6 +210,6 @@ export const simpleSmallBracket = [
     tournamentRoundText: "4",
     startTime: "2021-05-30",
     state: "SCHEDULED",
-    participants: []
-  }
+    participants: [],
+  },
 ];
