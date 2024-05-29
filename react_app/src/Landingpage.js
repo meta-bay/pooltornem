@@ -1,16 +1,21 @@
 import LandingHeader from "./LandingHeader";
+import { Link } from "react-router-dom";
 
 const Landingpage = () => {
   return (
     <div className="landing">
-      <div className="bg-dark text-light p-1 d-flex justify-content-between align-items-center"><LandingHeader /></div>
+      <div className="bg-dark text-light p-1 d-flex justify-content-between align-items-center">
+        <LandingHeader />
+      </div>
       <div className="landing-content">
         <div className="bg-image d-flex flex-column align-items-center justify-content-center">
           <h3 className="bg-dark text-light p-4 rounded-pill wel-come">
             Welcome To pool Tournament
           </h3>
           <p className="play text-center btn p-2 text-dark bg-light">
-            Let's Play
+            <Link to="/register" className="text-decoration-none">
+              Let's Play
+            </Link>
           </p>
         </div>
         <section className="p-4">

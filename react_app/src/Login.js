@@ -1,5 +1,6 @@
-import Dashheader from "./Dashheader";
 import LandingHeader from "./LandingHeader";
+import { Link } from "react-router-dom";
+import ball from "./images/8-ball.png";
 
 const Login = () => {
   const LoginForm = () => {
@@ -21,6 +22,9 @@ const Login = () => {
           </div>
           <button type="submit">LOGIN</button>
         </form>
+        <p className="to-login">
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
       </div>
     );
   };
@@ -33,9 +37,7 @@ const Login = () => {
         <div className="login-container">
           <div className="left-login">
             <div className="logo">
-              <h1>COMPANY</h1>
-              <h2>LOGO</h2>
-              <h3>NAME</h3>
+              <img src={ball} alt="" />
             </div>
           </div>
           <div className="right-login">
