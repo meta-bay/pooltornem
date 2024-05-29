@@ -26,23 +26,14 @@ const PlayerTable = () => {
       </div>
       <div className="players-list">
         <div className="member-table-container">
-          <div className="member-table-header">
-            <h2>Members</h2>
-            <div className="header-buttons">
-              <button className="btn btn-primary">Add new</button>
-              <button className="btn btn-secondary">Import members</button>
-              <button className="btn btn-secondary">
-                Export members (Excel)
-              </button>
-              <button className="btn btn-secondary">Filter</button>
-            </div>
+          <div className="member-table-header d-flex justify-content-center">
+            <h2>Players</h2>
           </div>
           <table className="member-table">
             <thead>
               <tr>
                 <th>Photo</th>
                 <th>Member name</th>
-                <th>Mobile</th>
                 <th>Email</th>
                 <th>Status</th>
                 <th>Operation</th>
