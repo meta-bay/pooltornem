@@ -1,42 +1,12 @@
-import { Outlet, Link } from "react-router-dom";
+import LandingHeader from "./LandingHeader";
 
 const Landingpage = () => {
   return (
     <div className="landing">
-      <nav className="bg-dark p-3 fixed-top d-flex justify-content-between">
-        <ul className="d-flex justify-content-center container">
-          <li className="btn text-light">Home</li>
-          <li>
-            <Link to="/match" className="btn text-light">
-              Match
-            </Link>
-          </li>
-          <li className="text-light">
-            <Link to="/players" className="btn text-light">
-              Players
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact-us" className="btn text-light">
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <div className="auth column">
-          <Link
-            to="/register"
-            className="text-decoration-none btn bg-light me-3"
-          >
-            Register
-          </Link>
-          <Link to="/login" className="text-decoration-none btn text-light">
-            Login
-          </Link>
-        </div>
-      </nav>
+      <div className="bg-dark text-light p-1 d-flex justify-content-between align-items-center"><LandingHeader /></div>
       <div className="landing-content">
         <div className="bg-image d-flex flex-column align-items-center justify-content-center">
-          <h3 className="bg-dark text-light p-3 rounded-pill wel-come">
+          <h3 className="bg-dark text-light p-4 rounded-pill wel-come">
             Welcome To pool Tournament
           </h3>
           <p className="play text-center btn p-2 text-dark bg-light">

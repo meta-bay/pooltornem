@@ -7,11 +7,12 @@ import {
   createTheme,
 } from "@g-loot/react-tournament-brackets";
 import Dashheader from "./Dashheader";
+import LandingHeader from "./LandingHeader";
 
 export default function Tournament() {
   return (
     <div>
-      <Dashheader />
+      <LandingHeader />
       <SingleElimination />
     </div>
   );

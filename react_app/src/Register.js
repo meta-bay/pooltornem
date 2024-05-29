@@ -1,4 +1,5 @@
 import Dashheader from "./Dashheader";
+import LandingHeader from "./LandingHeader";
 
 const Register = () => {
   const RegisterForm = () => {
@@ -42,8 +43,8 @@ const Register = () => {
 
   return (
     <div>
-      <div>
-        <Dashheader />
+      <div className="bg-dark text-light p-5 d-flex justify-content-between align-items-center">
+        <LandingHeader />
       </div>
       <div className="register">
         <div className="reg-container">
