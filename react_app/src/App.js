@@ -4,11 +4,12 @@ import Landingpage from "./Landingpage";
 import Register from "./Register";
 import Login from "./Login";
 import PlayerTable from "./PlayerTable";
+import Contact from "./Contact";
 
 function App() {
   return (
     <div className="App">
-      <PlayerTable />
+      <Contact />
     </div>
   );
 }

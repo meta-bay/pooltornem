@@ -281,3 +281,45 @@ code {
 .member-row {
   text-align: center;
 }
+
+.contact-page main {
+  padding: 50px 20px;
+}
+
+.contact-page h1 {
+  font-size: 48px;
+}
+
+.contact-page p {
+  color: #888;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.contact-item i {
+  font-size: 48px;
+  color: #aaa;
+}
+
+.contact-item h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-item a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
