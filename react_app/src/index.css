@@ -65,7 +65,7 @@ code {
   height: 420px;
 }
 
-.register {
+.register, .login {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -73,14 +73,14 @@ code {
   background: linear-gradient(to right, #43cea2, #185a9d);
 }
 
-.reg-container {
+.reg-container, .login-container {
   display: flex;
   width: 70%;
   height: 620px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.reg-left {
+.reg-left, .left-login {
   flex: 1;
   background: #43cea2;
   display: flex;
@@ -93,7 +93,7 @@ code {
   color: #fff;
 }
 
-.reg-right {
+.reg-right, .right-login {
   flex: 1;
   background: #2b2f3e;
   display: flex;
@@ -102,33 +102,33 @@ code {
   padding: 20px;
 }
 
-.register-form {
+.register-form, .login-form {
   color: #fff;
   max-width: 300px;
   width: 100%;
 }
 
-.register-form h2 {
+.register-form h2, .login-form h2 {
   margin-bottom: 0;
 }
 
-.register-form p {
+.register-form p, .login-form p {
   margin-top: 0;
   color: #43cea2;
 }
 
-.register-form form {
+.register-form form, .login-form form {
   display: flex;
   flex-direction: column;
 }
 
-.register-form label {
+.register-form label, .login-form label {
   margin-top: 10px;
   font-size: 14px;
   text-align: left;
 }
 
-.register-form input {
+.register-form input, .login-form input {
   padding: 10px;
   margin-top: 5px;
   border: none;
@@ -137,7 +137,7 @@ code {
   color: #fff;
 }
 
-.register-form input:focus {
+.register-form input:focus, .login-form input:focus {
   outline: none;
   background: #444a63;
 }
@@ -168,11 +168,36 @@ code {
   background: #36a589;
 }
 
-.login {
+.to-login {
   margin-top: 20px;
   font-size: 14px;
 }
 
-.login a {
+.to-login a {
   color: #43cea2;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.forgot-password a {
+  color: #43cea2;
+  text-decoration: none;
+}
+
+.login-form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: #43cea2;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-form button:hover {
+  background: #36a589;
 }
