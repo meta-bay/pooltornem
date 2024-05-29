@@ -1,13 +1,27 @@
+import { Outlet, Link } from "react-router-dom";
+
 const Landingpage = () => {
   return (
     <div className="landing">
-      <nav className="bg-dark p-3 fixed-top">
-        <ul className="d-flex justify-content-center">
+      <nav className="bg-dark p-3 fixed-top d-flex justify-content-between">
+        <ul className="d-flex justify-content-center container">
           <li className="btn text-light">Home</li>
-          <li className="btn text-light">Match</li>
-          <li className="btn text-light">Players</li>
+          <li>
+            <Link to="/match" className="btn text-light">Match</Link>
+          </li>
+          <li className="text-light">
+            <Link to="/players" className="btn text-light">
+              Players
+            </Link>
+          </li>
           <li className="btn text-light">Contact</li>
         </ul>
+        <div className="auth column">
+          <button className="reg-btn btn text-dark border me-3 bg-light">
+            Register
+          </button>
+          <button className="login-btn btn text-light border">Login</button>
+        </div>
       </nav>
       <div className="landing-content">
         <div className="bg-image d-flex flex-column align-items-center justify-content-center">
