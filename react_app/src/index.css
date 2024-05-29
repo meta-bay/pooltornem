@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -27,20 +27,23 @@ code {
   color: rgb(255, 255, 255) !important;
 }
 
-.score, .result .win, .result .loss {
+.score,
+.result .win,
+.result .loss {
   background: #000;
   color: aliceblue;
-  text-shadow: 0 0 5px #fff, /* White glow */
-               0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #000000, /* Magenta glow */
-               0 20px 40px #000000,
-               0 30px 50px #ffffff,
-               0 30px 60px #ffffff;
+  text-shadow:
+    0 0 5px #fff,
+    /* White glow */ 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #000000,
+    /* Magenta glow */ 0 20px 40px #000000,
+    0 30px 50px #ffffff,
+    0 30px 60px #ffffff;
 }
 
 .bg-image {
-  background-image: url('images/8-ball.jpg');
+  background-image: url("images/8-ball.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -58,14 +61,15 @@ code {
 }
 
 .art-image {
-  background-image: url('images/3-ball.jpg');
+  background-image: url("images/3-ball.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 420px;
 }
 
-.register, .login {
+.register,
+.login {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -73,14 +77,16 @@ code {
   background: linear-gradient(to right, #43cea2, #185a9d);
 }
 
-.reg-container, .login-container {
+.reg-container,
+.login-container {
   display: flex;
   width: 70%;
   height: 620px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.reg-left, .left-login {
+.reg-left,
+.left-login {
   flex: 1;
   background: #43cea2;
   display: flex;
@@ -93,7 +99,8 @@ code {
   color: #fff;
 }
 
-.reg-right, .right-login {
+.reg-right,
+.right-login {
   flex: 1;
   background: #2b2f3e;
   display: flex;
@@ -102,33 +109,39 @@ code {
   padding: 20px;
 }
 
-.register-form, .login-form {
+.register-form,
+.login-form {
   color: #fff;
   max-width: 300px;
   width: 100%;
 }
 
-.register-form h2, .login-form h2 {
+.register-form h2,
+.login-form h2 {
   margin-bottom: 0;
 }
 
-.register-form p, .login-form p {
+.register-form p,
+.login-form p {
   margin-top: 0;
   color: #43cea2;
 }
 
-.register-form form, .login-form form {
+.register-form form,
+.login-form form {
   display: flex;
   flex-direction: column;
 }
 
-.register-form label, .login-form label {
+.register-form label,
+.login-form label {
   margin-top: 10px;
   font-size: 14px;
   text-align: left;
 }
 
-.register-form input, .login-form input {
+.register-form input,
+.login-form input {
   padding: 10px;
   margin-top: 5px;
   border: none;
@@ -137,7 +150,8 @@ code {
   color: #fff;
 }
 
-.register-form input:focus, .login-form input:focus {
+.register-form input:focus,
+.login-form input:focus {
   outline: none;
   background: #444a63;
 }
@@ -200,4 +214,70 @@ code {
 
 .login-form button:hover {
   background: #36a589;
+}
+
+.players-list {
+  background-color: #f7f7f7;
+  height: 100vh;
+}
+
+.member-table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-buttons .btn {
+  margin-left: 10px;
+}
+
+.member-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.member-table th, .member-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.member-table th {
+  background-color: #f9f9f9;
+}
+
+.member-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.inactive {
+  color: red;
+}
+
+.btn-link {
+  border: none;
+  background: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.member-row {
+  text-align: center;
 }
