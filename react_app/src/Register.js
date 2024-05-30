@@ -19,12 +19,12 @@ const Register = () => {
     fetch("http://localhost:3000/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
+      body: {
         username: usernameValue,
         name: nameValue,
         email: emailValue,
         password: passwordValue,
-      }),
+      },
     })
       .then((response) => {
         if (!response.ok) {
@@ -97,8 +97,7 @@ const Register = () => {
             <input type="checkbox" id="terms" />
             <label htmlFor="terms">I agree to the terms and conditions</label>
           </div>
-
-          <button type="submit">CREATE ACCOUNT</button>
+          <button type="submit" value={"submit"}>CREATE ACCOUNT</button>
         </form>
         <p className="to-login">
           Already a member? <Link to="/login">Login</Link>
