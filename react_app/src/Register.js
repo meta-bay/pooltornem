@@ -7,7 +7,7 @@ import axios from "axios";
 const Register = () => {
   const navigate = useNavigate(); // Access the navigate function to navigate programmatically
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const nameValue = event.target.name.value;
     const usernameValue = event.target.username.value;
@@ -21,20 +21,18 @@ const Register = () => {
     }
 
     // Send a POST request to the /signup URL
-    axios
-      .post("http://localhost:3000/signup", {
+    try {
+    const response = await axios
+      .post("http://localhost:5000/players", {
         username: usernameValue,
         name: nameValue,
         email: emailValue,
         password: passwordValue,
       })
-      .then((response) => {
-        // Redirect the user to the login page after successful signup
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+      navigate("/login");
+    } catch (error) {
+      console.error('Error signing up:', error);
+    }
   };
 
   const RegisterForm = () => {
