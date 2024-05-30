@@ -7,7 +7,7 @@ import axios from "axios"
 const Login = () => {
   const [error, setError] = useState(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Retrieve email and password from the form
@@ -15,22 +15,15 @@ const Login = () => {
     const userPassword = event.target.password.value;
 
     // Send a POST request to the /login URL
-    axios
-      .post("http://localhost:3000/login", {
+    try {
+      const response = await axios.post('http://localhost:5000/players', 
+      {
         email: userEmail,
-        password: userPassword,
-      })
-      .then((response) => {
-        if (response.status !== 200) {
-          throw new Error("Invalid username or password");
-        }
-        // Redirect the user to the home page after successful login
-        window.location.href = "/dashboard";
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setError("Invalid username or password");
+        password: userPassword
       });
+    } catch (error) {
+      console.error('Error logging in:', error);
+    }
   };
   const LoginForm = () => {
     return (
