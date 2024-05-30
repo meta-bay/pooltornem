@@ -59,11 +59,6 @@ const Login = () => {
           <button type="submit" value={"submit"}>
             LOGIN
           </button>
-          {error && (
-            <div className="alert-message">
-              <p style={{ color: "red" }}>{error}</p>
-            </div>
-          )}
         </form>
         <p className="to-login">
           Don't have an account? <Link to="/register">Register</Link>

@@ -24,7 +24,6 @@ const Register = () => {
         name: nameValue,
         email: emailValue,
         password: passwordValue,
-        confirmPassword: confirmPasswordVal,
       }),
     })
       .then((response) => {
@@ -38,9 +37,6 @@ const Register = () => {
         // Redirect the user to the welcome page after successful signup
         navigate("/login");
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
   };
 
   const RegisterForm = () => {
