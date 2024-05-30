@@ -2,27 +2,28 @@ import LandingHeader from "./LandingHeader";
 import { Link } from "react-router-dom";
 import ball from "./images/8-ball.png";
 import { useState } from "react";
+import axios from "axios"
 
 const Login = () => {
   const [error, setError] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Send a POST request to the /login URL
+
+    // Retrieve email and password from the form
     const userEmail = event.target.email.value;
     const userPassword = event.target.password.value;
-    fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: { email: userEmail, password: userPassword },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Invalid name or password");
-        }
-        return response.json();
+
+    // Send a POST request to the /login URL
+    axios
+      .post("http://localhost:3000/login", {
+        email: userEmail,
+        password: userPassword,
       })
-      .then((data) => {
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error("Invalid username or password");
+        }
         // Redirect the user to the home page after successful login
         window.location.href = "/dashboard";
       })
@@ -35,7 +36,7 @@ const Login = () => {
     return (
       <div className="login-form">
         <h2>LOGIN</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email or Username</label>
           <input
             type="text"

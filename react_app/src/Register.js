@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Dashheader from "./Dashheader";
 import LandingHeader from "./LandingHeader";
 import ball from "./images/8-ball.png";
+import axios from "axios";
 
 const Register = () => {
-  const navigate = useNavigate(); // Access the history object to navigate programmatically
+  const navigate = useNavigate(); // Access the navigate function to navigate programmatically
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,26 +14,22 @@ const Register = () => {
     const emailValue = event.target.email.value;
     const passwordValue = event.target.password.value;
     const confirmPasswordVal = event.target.confirmPassword.value;
+
+    if (passwordValue !== confirmPasswordVal) {
+      console.error("Passwords do not match");
+      return;
+    }
+
     // Send a POST request to the /signup URL
-    fetch("http://localhost:3000/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: {
+    axios
+      .post("http://localhost:3000/signup", {
         username: usernameValue,
         name: nameValue,
         email: emailValue,
         password: passwordValue,
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
       })
-      .then((data) => {
-        console.log("Response from server:", data);
-        // Redirect the user to the welcome page after successful signup
+      .then((response) => {
+        // Redirect the user to the login page after successful signup
         navigate("/login");
       })
       .catch((error) => {
@@ -94,10 +89,10 @@ const Register = () => {
           />
 
           <div className="terms">
-            <input type="checkbox" id="terms" />
+            <input type="checkbox" id="terms" required />
             <label htmlFor="terms">I agree to the terms and conditions</label>
           </div>
-          <button type="submit" value={"submit"}>CREATE ACCOUNT</button>
+          <button type="submit" value="submit">CREATE ACCOUNT</button>
         </form>
         <p className="to-login">
           Already a member? <Link to="/login">Login</Link>
