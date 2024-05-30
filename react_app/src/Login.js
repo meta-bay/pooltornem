@@ -14,7 +14,7 @@ const Login = () => {
     fetch("http://localhost:3000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: userEmail, password: userPassword }),
+      body: { email: userEmail, password: userPassword },
     })
       .then((response) => {
         if (!response.ok) {
