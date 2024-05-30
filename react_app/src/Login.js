@@ -21,6 +21,7 @@ const Login = () => {
         email: userEmail,
         password: userPassword
       });
+      window.location.href = "/dashboard";
     } catch (error) {
       console.error('Error logging in:', error);
     }
